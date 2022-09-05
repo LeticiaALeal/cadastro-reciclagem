@@ -1,0 +1,73 @@
+.tela {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: #f8f9fd;
+  }
+  
+  .input-texto {
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 700px;
+    font-size: 18px;
+  }
+  
+  input[type="submit"] {
+    margin-top: 35px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    background: #01d28e;
+    border: 1px solid #01d28e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 200px;
+  }
+  
+  input[type="submit"]:hover {
+    background: #6cf0c2;
+  }
+  
+  .botao-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cadastro-form {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 20px;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 70px;
+    margin-bottom: 100px;
+    width: 50rem;
+  }
+  
+  .lista-container {
+    display: flex;
+  }
+  
+  .titulo {
+    font-size: 35px;
+    margin-bottom: 80px;
+  }
+  
+  .container-cadastro {
+    display: block;
+    flex-direction: column;
+    gap: 8px;
+    margin: 30px;
+    font-size: 25px;
+    
+  }
+  .imagemAtualizar {
+    height: 100px;
+    width: 150px;
+  }

@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  },
+  "name": "cadastro-reciclagem",
+  "description": "Este repositório armazena o projeto desenvolvido na disciplina de web do 6º semestre",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeticiaALeal/cadastro-reciclagem.git"
+  },
+  "author": "Bianca e Letícia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeticiaALeal/cadastro-reciclagem/issues"
+  },
+  "homepage": "https://github.com/LeticiaALeal/cadastro-reciclagem#readme"
+}
