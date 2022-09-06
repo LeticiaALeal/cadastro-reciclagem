@@ -1,0 +1,43 @@
+create schema cooperativas;
+use cooperativas;
+
+create table cooperativa (
+id int not null auto_increment,
+nome varchar(100) not null,
+endereco varchar(100) not null,
+dataInicio varchar(45) not null not null,
+colaboradores int not null,
+triagem float not null,
+rejeitos float null,
+foto varchar(200) not null,
+primary key (id));
+
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Nossa Senhora Aparecida", "Rua Serra Dourada, nº 165, Jardim Baronesa", "Década de 1990", 35, 80, 20, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Santa Genebra", "Rua Estácio de Sá, nº 577, Santa Genebra", "Década de 2000", 10, 15, 5, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Unidos da Vitória (CEASA)", "Rodovia D. Pedro I, s/n, KM 140.5", "Década de 2000", 18, 60, 6, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Aliança", "Rua Antônio Jose Rodrigues, s/n, Jardim Mirassol", "Década de 1990", 22, 52, 7, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Nova Vida", "Rua dos Cambarás, nº 670, Parque Via Norte", "Década de 2000", 13, 30,96, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Bom Sucesso", "Rua Engenheiro Calcanolo, nº 6, Vila Rogério", "Década de 2010", 12, 16, 3, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Antônio Costa Santos", "Avenida Dois, s/n, Jardim Satélite Iris II", "Década de 2000", 39, 85, 20, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Reciclamp", "Rua Barão de Jaguara, nº 295, Centro", "Década de 2000", 10, 15, 5, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Santo Expedito", "Rua Basílio da Gama, nº 101, Vila Castelo", "Década de 2000", 19, 20, 4, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Remodela", "Av. José Cristiano Gonçalves, nº 300, Jardim Caraí", "Década de 2000", 10, 18, 2, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("São Bernardo", "Avenida Prefeito Faria Lima, nº 630, São Bernardo", "Década de 2000", 25, 59, 11, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Tatuapé", "Estrada Mão Branca, s/n, Jardim Satélite Iris", "Década de 2000", 20, 20, 2, "");
+insert into cooperativa (nome, endereco, dataInicio, colaboradores, triagem, rejeitos, foto)
+values ("Renascer", "Rua Madre Teresa de Calcutá, s/n, Jardim Santa Lucia", "Década de 2000", 18, 20, 6, "");
+
+select * from cooperativa;
+
