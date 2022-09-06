@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Cooperativas de Reciclagem</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperativas de Campinas</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
 </head>
-
 <body>
     <div class="container">
-        <h1>COOPERATIVAS DE CAMPINAS</h1>
+        <h1 class="main">Cooperativas de Campinas</h1>
+        <div>
+            <% for (let i=0; i<cooperativas.length; i++) { %>
+                <div class="card">
+                    <img src="<%= cooperativas[i].foto %>"
+                    class="card-image" alt="<%= cooperativas[i].nome %>"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= cooperativas[i].nome %>
+                        </h5>
+                        <p class="card-text">
+                            <%= cooperativas[i].endereco %>
+                        </p>
+                    </div>
+                </div>
+                <hr/>
+                <% } %>
+        </div>
     </div>
 </body>
-
 </html>
