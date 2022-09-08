@@ -1,0 +1,49 @@
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/nsAparecida.png?alt=media&token=3a971699-705f-4d14-969e-f592dcce0499' 
+where id = 1;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/stGenebra.png?alt=media&token=edbc987d-5e82-41f2-81a9-1ab7c259665d' 
+where id = 2;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/unidosVitoria.png?alt=media&token=56f9b94c-46bd-4731-a0d0-ca97fbb7c1e7' 
+where id = 3;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/alianca.png?alt=media&token=c8b8ff11-8396-4b48-bb60-18b854841f05' 
+where id = 4;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/novaVida.png?alt=media&token=64b32898-6c27-4141-be2e-1655d4dca384' 
+where id = 5;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/bomSucesso.png?alt=media&token=6d31d849-f03d-4831-95ad-37f946887e0e' 
+where id = 6;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/antonioCosta.png?alt=media&token=686e76ab-13bf-4012-ac08-e6c7159ce61b' 
+where id = 7;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/stExpedito.png?alt=media&token=923d321b-2c20-4a52-a365-c42d495eed49' 
+where id = 9;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/remodela.png?alt=media&token=a4f5e39f-e51c-47a5-b14d-0293a9df9960' 
+where id = 10;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/sBernardo.png?alt=media&token=27659c90-9863-463e-b834-cebed2b23107' 
+where id = 11;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/tatuape.png?alt=media&token=f3b5c3fb-3788-47ba-ac09-39ad515dcd3e' 
+where id = 12;
+
+UPDATE cooperativa 
+set foto = 'https://firebasestorage.googleapis.com/v0/b/recycle-mapping-6416c.appspot.com/o/renascer.png?alt=media&token=d6fd146d-d066-4283-89a5-2caebdb6e0d0' 
+where id = 13;
+
+delete from cooperativa  where nome = 'reciclamp';
