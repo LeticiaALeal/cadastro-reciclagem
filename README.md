@@ -4,7 +4,7 @@ Este repositório armazena o projeto desenvolvido na disciplina de web do 6º se
 
 ---
 
-> ##### **PROTÓTIPO:**
+##### **PROTÓTIPO:**
 
     Os protótipos das telas foram desenhados com o auxílio do software*marvelapp*. Para acessar, clique no link abaixo:
 
@@ -12,6 +12,6 @@ Este repositório armazena o projeto desenvolvido na disciplina de web do 6º se
 
 ---
 
-> ##### **DIAGRAMA DE CLASSES:**
+##### **DIAGRAMA DE CLASSES:**
 
 ![1663368888730](image/README/1663368888730.png)
