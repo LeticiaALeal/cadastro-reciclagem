@@ -1,7 +1,10 @@
 const { home } = require('../controllers/home');
 const { login } = require('../controllers/login');
+const { editar } = require('../controllers/editar');
 const { addCooperativaController } = require('../controllers/cadastro')
 const { check, validationResult } = require('express-validator');
+const { cooperativaToEdit } = require('../controllers/cooperativaToEdit');
+const { minhasCooperativas } = require('../controllers/minhasCooperativas');
 
 module.exports = {
     home: (app) => {
@@ -19,7 +22,7 @@ module.exports = {
           res.render('cadastro.ejs', {erros: {}, cooperativa: {}});
         });
       },
-      cadastroCooperativa: (app) => {
+    cadastroCooperativa: (app) => {
         app.post('/cooperativa/salvar', 
         [
             check('nome').isLength({min:3, max:100}).withMessage('Nome deve ter no mínimo 3 caracteres'),
@@ -39,6 +42,30 @@ module.exports = {
             }
             addCooperativaController(app, req, res); //Novo controller
         })
-      }
+      },
+      editar: (app) => {
+        app.get('/editar', function (req, res) {
+            cooperativaToEdit(app, req, res)
+        })
+      },
+      editCooperativa: (app) => {
+        app.post('/cooperativa/editar', 
+        [
+            check('nome').isLength({min:3, max:100}).withMessage('Nome deve ter no mínimo 3 caracteres'),
+            check('endereco').isLength({min:4, max:250}).withMessage('Endereço deve ter no mínimo 4 caracteres'),
+            check('dataInicio').isLength({min:4, max:100}).withMessage('A data de início deve ter no mínimo 4 caracteres'),
+            check('colaboradores').isLength({min:1, max:5}).isNumeric().withMessage('A quantidade de colaboradores deve ser numérica'),
+            check('rejeitos').isLength({min:1, max:5}).isNumeric().withMessage('O valor de rejeitos deve ser numérica'),
+            check('triagem').isLength({min:1, max:5}).isNumeric().withMessage('O valor da triagem deve ser numérica'),
+            check('foto').isURL().withMessage('Foto deve conter um link')
+        ], (req, res) => {
+            editar(app, req, res); //Novo controller
+        })
+      },
+      minhasCooperativas: (app) => {
+        app.get('/minhasCooperativas', function (req, res) {
+            minhasCooperativas(app, req, res)
+        })
+      },
 }
     

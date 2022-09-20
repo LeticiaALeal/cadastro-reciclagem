@@ -11,8 +11,8 @@
     
     <div class="menu">
         <h1 class="titulo__menu">Cooperativas de Campinas</h1>
+        <a href="/"><h3 class="item__menu">Home</h3></a>
         <a href="/cadastro"><h3 class="item__menu">Cadastro</h3></a>
-        <a href="/minhasCooperativas"><h3 class="item__menu">Minhas cooperativas</h3></a>
         <a href="/login"><h3 class="item__menu">Login</h3></a>
     </div>
         <section class="secao">
@@ -33,6 +33,9 @@
                             Realiza a triagem de <%= cooperativas[i].triagem %> toneladas de resíduos de lixo por mês. 
                             Deste montante <%= cooperativas[i].rejeitos %> são descartados como rejeitos.<br/>
                         </p>
+                        <div>
+                            <a href="/editar?id=<%= cooperativas[i].id %>"><button class="botao">Editar</button></a><button class="botao">Excluir</button>
+                        </div>
                     </div>
                 
                 <hr/>

@@ -70,4 +70,14 @@
       max-width: 600px;
       font-family: 'Josefin Sans', sans-serif;
     }
-  
+   .botao {
+    cursor: pointer;
+    font-size: 15px;
+    font-height: 140px;
+    background: #01d28e;
+    border: 1px solid #01d28e;
+    color: #fff;
+    border-radius: 10px;
+    width: 60px;
+    margin-right:10px;
+   }

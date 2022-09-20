@@ -1,0 +1,14 @@
+create table usuario (
+id int not null auto_increment,
+nome varchar(100) not null,
+email varchar(100) not null,
+senha varchar(100) not null not null,
+primary key (id));
+
+insert into usuario (nome, email, senha) values ('Joaquim', 'joaquim@gmail.com', 'joaquim123');
+
+ALTER TABLE cooperativa ADD idUsuario int;
+
+ALTER TABLE cooperativa  ADD CONSTRAINT `fk_usuario` FOREIGN KEY ( `idUsuario` ) REFERENCES `usuario` ( `id` );
+
+UPDATE cooperativa set idusuario = 1 where id = 1;

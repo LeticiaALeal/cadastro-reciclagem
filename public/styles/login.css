@@ -1,4 +1,22 @@
 
+.menu{
+  display: flex;
+  background-color: #b0c146;  
+  color: white;
+}
+.item__menu{
+  border-style:solid; 
+  padding: 10px;
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.titulo__menu{
+  float: left;
+  margin-right: 400px;
+  margin-left: 30px;
+}
 .app {
     font-family: sans-serif;
     display: flex;

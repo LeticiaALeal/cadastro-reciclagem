@@ -15,53 +15,42 @@
     <a href="/minhasCooperativas"><h3 class="item__menu">Minhas cooperativas</h3></a>
 </div>
         <div class="cadastro-form">
-          <section>
-            <% if(erros) { %>
-              <ul>
-                <% for(let i = 0; i < erros.length; i++){ %>
-                  <li>
-                    <%= erros[i].msg %>
-                  </li>
-                <% } %>
-              </ul>
-            <% } %>
-          </section>
-            <form class="form" action="/cooperativa/salvar" method="post">
+            <form class="form" action="/cooperativa/editar?id=<%= cooperativa[0].id %>" method="post">
               <div class="container-cadastro">
-                <h3 class='titulo'>Cadastro Cooperativas</h3>
+                <h3 class='titulo'>Editar Cooperativas</h3>
               <label>Nome </label><br/>
                 <input class='input-texto' 
-                type="text" name="nome" value=<%= cooperativa.nome %>>    
+                type="text" name="nome" value="<%= cooperativa[0].nome %>">    
               </div>
               <div class="container-cadastro">
                 <label>Endereço </label><br/>
                 <input class='input-texto' 
-                type="text" name="endereco" value=<%= cooperativa.endereco %>> 
+                type="text" name="endereco" value="<%= cooperativa[0].endereco %>"> 
               </div>
               <div class="container-cadastro">
                 <label>Início das operações </label><br/>
                 <input class='input-texto' 
-                type="text" name="dataInicio" value=<%= cooperativa.dataInicio %>> 
+                type="text" name="dataInicio" value="<%= cooperativa[0].dataInicio %>"> 
               </div>
               <div class="container-cadastro">
                 <label>Quantidade colaboradores </label><br/>
                 <input class='input-texto' 
-                type="text" name="colaboradores" value=<%= cooperativa.colaboradores %>> 
+                type="text" name="colaboradores" value="<%= cooperativa[0].colaboradores %>"> 
               </div>
               <div class="container-cadastro">
                 <label>Quantidade rejeitos </label><br/>
                 <input class='input-texto' 
-                type="text" name="rejeitos" value=<%= cooperativa.rejeitos %>> 
+                type="text" name="rejeitos" value="<%= cooperativa[0].rejeitos %>"> 
               </div>
               <div class="container-cadastro">
                 <label>Quantidade triagem </label><br/>
                 <input class='input-texto' 
-                type="text" name="triagem" value=<%= cooperativa.triagem %>> 
+                type="text" name="triagem" value="<%= cooperativa[0].triagem %>"> 
               </div>
               <div class="container-cadastro">
                 <label>Foto </label><br/>
                 <input class='input-texto' 
-                type="text" name="foto" value=<%= cooperativa.foto %>> 
+                type="text" name="foto" value="<%= cooperativa[0].foto %>"> 
               </div>
               <div class="botao-container">
                 <input type="submit" />
