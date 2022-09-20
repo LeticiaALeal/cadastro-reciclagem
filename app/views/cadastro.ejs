@@ -9,52 +9,62 @@
 </head>
 
 <body>
+  <div class="menu">
+    <h1 class="titulo__menu">Cooperativas de Campinas</h1>
+    <a href="/"><h3 class="item__menu">Home</h3></a>
+    <a href="#"><h3 class="item__menu">Minhas cooperativas</h3></a>
+</div>
         <div class="cadastro-form">
-            <form onSubmit={submit}>
+          <section>
+            <% if(erros) { %>
+              <ul>
+                <% for(let i = 0; i < erros.length; i++){ %>
+                  <li>
+                    <%= erros[i].msg %>
+                  </li>
+                <% } %>
+              </ul>
+            <% } %>
+          </section>
+            <form class="form" action="/cooperativa/salvar" method="post">
               <div class="container-cadastro">
                 <h3 class='titulo'>Cadastro Cooperativas</h3>
               <label>Nome </label><br/>
                 <input class='input-texto' 
-                type="text" name="nome" id="nome" maxlength="50" required 
-                />    
+                type="text" name="nome" value=<%= cooperativa.nome %>>    
               </div>
               <div class="container-cadastro">
                 <label>Endereço </label><br/>
                 <input class='input-texto' 
-                type="text" name="endereco" maxlength="70" required 
-                /> 
+                type="text" name="endereco" value=<%= cooperativa.endereco %>> 
               </div>
               <div class="container-cadastro">
                 <label>Início das operações </label><br/>
                 <input class='input-texto' 
-                type="text" name="dataInicio" maxlength="20" required 
-                /> 
+                type="text" name="dataInicio" value=<%= cooperativa.dataInicio %>> 
               </div>
               <div class="container-cadastro">
                 <label>Quantidade colaboradores </label><br/>
                 <input class='input-texto' 
-                type="text" name="qtdColaboradores" maxlength="20" required 
-                /> 
+                type="text" name="colaboradores" value=<%= cooperativa.colaboradores %>> 
               </div>
               <div class="container-cadastro">
                 <label>Quantidade rejeitos </label><br/>
                 <input class='input-texto' 
-                type="text" name="qtdRejeitos" maxlength="20" required 
-                /> 
+                type="text" name="rejeitos" value=<%= cooperativa.rejeitos %>> 
               </div>
               <div class="container-cadastro">
                 <label>Quantidade triagem </label><br/>
                 <input class='input-texto' 
-                type="text" name="qtdTriagem" maxlength="20" required 
-                /> 
+                type="text" name="triagem" value=<%= cooperativa.triagem %>> 
               </div>
               <div class="container-cadastro">
                 <label>Foto </label><br/>
-                <input class='input-texto' type="file" name="foto" required 
-                /> 
+                <input class='input-texto' 
+                type="text" name="foto" value=<%= cooperativa.foto %>> 
               </div>
               <div class="botao-container">
-                <input class='input-texto' type="submit" />
+                <input type="submit" />
               </div>
             </form>
           </div>
