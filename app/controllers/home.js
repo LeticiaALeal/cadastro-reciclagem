@@ -1,6 +1,7 @@
 
 const dbConnection = require('../../config/dbConnections');
 const { getCooperativas } = require('../models/home');
+const logger = require("../../config/logger");
 
 module.exports.home = (app, req, res) => {
     getCooperativas(dbConnection(), (error, result) => {

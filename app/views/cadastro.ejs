@@ -3,8 +3,104 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Cooperativas de Reciclagem</title>
+    <title>Cadastro de Cooperativas</title>
     <link rel="stylesheet" type="text/css" href="styles/cadastro.css" />
+    <link rel="icon" type="image/ico" href="images/reciclar.png"/>
+
+    <style>
+              .menu{
+          display: flex;
+          background-color: #b0c146;  
+          color: white;
+        }
+        .item__menu{
+          border-style:solid; 
+          padding: 10px;
+          float: right;
+          margin-right: 10px;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+        .titulo__menu{
+          float: left;
+          margin-right: 400px;
+          margin-left: 30px;
+        }
+        .tela {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+            background-color: #f8f9fd;
+          }
+          
+          .input-texto {
+            height: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 700px;
+            font-size: 18px;
+          }
+          
+          input[type="submit"] {
+            margin-top: 35px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            background: #01d28e;
+            border: 1px solid #01d28e;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            width: 200px;
+          }
+          
+          input[type="submit"]:hover {
+            background: #6cf0c2;
+          }
+          
+          .botao-container {
+            display: flex;
+            justify-content: center;
+          }
+          
+          .cadastro-form {
+            display: flex;
+            margin-right: auto;
+            margin-left: auto;
+            gap: 20px;
+            background-color: white;
+            padding: 2rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-top: 70px;
+            margin-bottom: 100px;
+            width: 50rem;
+          }
+          
+          .lista-container {
+            display: flex;
+          }
+          
+          .titulo {
+            font-size: 35px;
+            margin-bottom: 80px;
+          }
+          
+          .container-cadastro {
+            display: block;
+            flex-direction: column;
+            gap: 8px;
+            margin: 30px;
+            font-size: 25px;
+            
+          }
+          .imagemAtualizar {
+            height: 100px;
+            width: 150px;
+          }     
+
+    </style>
 
 </head>
 
@@ -14,7 +110,8 @@
     <a href="/"><h3 class="item__menu">Home</h3></a>
     <a href="/minhasCooperativas"><h3 class="item__menu">Minhas cooperativas</h3></a>
 </div>
-        <div class="cadastro-form">
+
+        <div class="modal-erro">
           <section>
             <% if(erros) { %>
               <ul>
@@ -26,6 +123,8 @@
               </ul>
             <% } %>
           </section>
+        </div>
+        <div class="cadastro-form">
             <form class="form" action="/cooperativa/salvar" method="post">
               <div class="container-cadastro">
                 <h3 class='titulo'>Cadastro Cooperativas</h3>
