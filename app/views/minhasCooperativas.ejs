@@ -13,8 +13,13 @@
     <div class="menu">
         <h1 class="titulo__menu">Cooperativas de Campinas</h1>
         <a href="/"><h3 class="item__menu">Home</h3></a>
-        <a href="/cadastro"><h3 class="item__menu">Cadastro</h3></a>
-        <a href="/login"><h3 class="item__menu">Login</h3></a>
+        <% if(user) { %>
+            <a href="/cadastro"><h3 class="item__menu">Cadastro</h3></a>
+            <a href="/logout"><h3 class="item__menu">Sair</h3></a>
+            <h2><%= user %></h2>
+        <% } else { %>
+            <a href="/login"><h3 class="item__menu">Login</h3></a>
+        <% }%>
     </div>
         <section class="secao">
         <div class="item">

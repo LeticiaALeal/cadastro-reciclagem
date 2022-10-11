@@ -3,8 +3,9 @@ const { addCooperativa } = require('../models/cadastro');
 
 module.exports.addCooperativaController = (app, req, res) => {
     let cooperativa = req.body;
+    let user = req.session.user;
     dbConn = dbConnection();
-    addCooperativa(cooperativa, dbConn, (error, result) => {
+    addCooperativa(cooperativa, user,dbConn, (error, result) => {
       if (error) {
         logger.log({
             level: 'error',

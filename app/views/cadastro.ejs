@@ -108,7 +108,13 @@
   <div class="menu">
     <h1 class="titulo__menu">Cooperativas de Campinas</h1>
     <a href="/"><h3 class="item__menu">Home</h3></a>
-    <a href="/minhasCooperativas"><h3 class="item__menu">Minhas cooperativas</h3></a>
+    <% if(user) { %>
+      <a href="/minhasCooperativas"><h3 class="item__menu">Minhas cooperativas</h3></a>
+      <a href="/logout"><h3 class="item__menu">Sair</h3></a>
+      <h2><%= user %></h2>
+    <% } else { %>
+      <a href="/login"><h3 class="item__menu">Login</h3></a>
+    <% }%>
 </div>
 
         <div class="modal-erro">

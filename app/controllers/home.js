@@ -13,6 +13,6 @@ module.exports.home = (app, req, res) => {
             res.status(500).render('erros.ejs', { error: error});
             return;
         }
-     res.render('home.ejs', {cooperativas: result});
+     res.render('home.ejs', {cooperativas: result, user: req.session.user});
     });
 }; 

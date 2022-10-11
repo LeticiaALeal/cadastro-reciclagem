@@ -1,0 +1,20 @@
+ALTER TABLE cooperativa ADD emailUsuario varchar(100);
+UPDATE cooperativa set emailUsuario = "joaquim@gmail.com" where id = 1;
+ALTER TABLE cooperativa DROP CONSTRAINT fk_usuario;
+ALTER TABLE cooperativa DROP COLUMN idUsuario;
+
+insert into usuario (nome, email, senha) values ('Pedro', 'pedro@gmail.com', 'pedro123');
+insert into usuario (nome, email, senha) values ('Luciana', 'luciana@gmail.com', 'luciana123');
+insert into usuario (nome, email, senha) values ('Felipe', 'felipe@gmail.com', 'felipe123');
+insert into usuario (nome, email, senha) values ('Andre', 'andre@gmail.com', 'andre123');
+insert into usuario (nome, email, senha) values ('Marinalva', 'marinalva@gmail.com', 'marinalva123');
+insert into usuario (nome, email, senha) values ('Jucelia', 'jucelia@gmail.com', 'jucelia123');
+insert into usuario (nome, email, senha) values ('Catarina', 'catarina@gmail.com', 'catarina123');
+
+UPDATE cooperativa set emailUsuario = "pedro@gmail.com" where id in (2,3);
+UPDATE cooperativa set emailUsuario = "luciana@gmail.com" where id in (4);
+UPDATE cooperativa set emailUsuario = "felipe@gmail.com" where id in (5);
+UPDATE cooperativa set emailUsuario = "andre@gmail.com" where id in (6,7,8);
+UPDATE cooperativa set emailUsuario = "marinalva@gmail.com" where id in (9);
+UPDATE cooperativa set emailUsuario = "jucelia@gmail.com" where id in (10);
+UPDATE cooperativa set emailUsuario = "catarina@gmail.com" where id in (11,12,13);

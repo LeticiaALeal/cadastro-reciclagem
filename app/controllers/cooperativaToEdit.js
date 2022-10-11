@@ -5,6 +5,6 @@ module.exports.cooperativaToEdit = (app, req, res) => {
     let id = req.query.id
     dbConn = dbConnection();
     getCooperativa(id, dbConn, (error, result) => {
-        res.render('editar.ejs', {cooperativa: result});
+        res.render('editar.ejs', {cooperativa: result, user: req.session.user});
     });
 }

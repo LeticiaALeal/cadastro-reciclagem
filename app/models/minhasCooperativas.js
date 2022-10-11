@@ -1,6 +1,6 @@
 module.exports = {
-    getCooperativas: (id, connection, callback) => {
-        const sql = `select * from cooperativa where idUsuario = "${id}";`;
+    getCooperativas: (user, connection, callback) => {
+        const sql = `select * from cooperativa where emailUsuario = "${user}";`;
         connection.query(sql, callback);
     }
 }
