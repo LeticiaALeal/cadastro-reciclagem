@@ -1,4 +1,3 @@
-
 const dbConnection = require('../../config/dbConnections');
 const { getCooperativas } = require('../models/home');
 const logger = require("../../config/logger");

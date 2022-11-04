@@ -1,6 +1,7 @@
 const { home } = require('../controllers/home');
 const { login } = require('../controllers/login');
 const { editar } = require('../controllers/editar');
+const { excluir } = require('../controllers/excluir');
 const { addCooperativaController } = require('../controllers/cadastro')
 const { check, validationResult } = require('express-validator');
 const { cooperativaToEdit } = require('../controllers/cooperativaToEdit');
@@ -70,7 +71,7 @@ module.exports = {
       login: (app) => {
         app.post('/autenticarusuario', 
         [
-            check('email').isLength({min:6}).isEmail().normalizeEmail().withMessage('e-mail deve ter no mínimo 6 caracteres'),
+            check('email').isLength({min:6}).isEmail().normalizeEmail().withMessage('E-mail deve ter no mínimo 6 caracteres!'),
         ], (req, res) => {
             const err = validationResult(req);
             let user = req.body;
@@ -89,5 +90,11 @@ module.exports = {
                });
           });
       },
+
+      excluir: (app) => {
+        app.get('/excluir', function (req, res) {
+            excluir(app, req, res);
+        });
+    }
 }
     

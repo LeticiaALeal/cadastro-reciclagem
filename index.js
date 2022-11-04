@@ -9,4 +9,5 @@ routes.cadastroCooperativa(app);
 routes.editar(app);
 routes.editCooperativa(app);
 routes.minhasCooperativas(app);
+routes.excluir(app);
 routes.logout(app);
