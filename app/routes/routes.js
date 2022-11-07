@@ -41,7 +41,7 @@ module.exports = {
                 res.render('cadastro.ejs', {erros: erros, cooperativa: cooperativa});
                 return
             }
-            addCooperativaController(app, req, res); //Novo controller
+            addCooperativaController(app, req, res);
         })
       },
       editar: (app) => {
@@ -60,7 +60,7 @@ module.exports = {
             check('triagem').isLength({min:1, max:5}).isNumeric().withMessage('O valor da triagem deve ser numérica'),
             check('foto').isURL().withMessage('Foto deve conter um link')
         ], (req, res) => {
-            editar(app, req, res); //Novo controller
+            editar(app, req, res); 
         })
       },
       minhasCooperativas: (app) => {
